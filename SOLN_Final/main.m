@@ -1,8 +1,14 @@
+tag = 1;
 %Enter the image, hesaff and heraff directories here
+if tag == 0
 hesaff_dir = 'C:\D\SC coursework\Q3\computer vision\assignments\Final Project\modelCastle_features\hesaff';
 haraff_dir = 'C:\D\SC coursework\Q3\computer vision\assignments\Final Project\modelCastle_features\haraff';
 im_dir = 'C:\D\SC coursework\Q3\computer vision\assignments\Final Project\model_castle_png';
-
+elseif tag == 1  
+hesaff_dir = 'D:\TU Delft\Courses\Computer Vision\Assignments\modelCastle_features\hesaff';
+haraff_dir = 'D:\TU Delft\Courses\Computer Vision\Assignments\modelCastle_features\haraff';
+im_dir = 'D:\TU Delft\Courses\Computer Vision\Assignments\modelCastlePNG';    
+end
 file_name = @(dir)[dir.folder '\' dir.name];
 
 %% Reading the features and image files
@@ -66,7 +72,6 @@ for i = 1:n_imgs
     
     %plotmatches(im{1},im{2},feat1,feat2,newmatches{end},'Stacking','o');
 end
-
 
 %% Chaining
 point_view_matrix = chaining(newmatches);
