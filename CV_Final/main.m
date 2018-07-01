@@ -42,4 +42,4 @@ disp('3D coordinates obtained')
 run('stitching3.m')    
 disp('Transformation complete')
 %% 3D model plotting
-plot3(Z(:,1),Z(:,2),Z(:,3),'.')
+plot3(S_cell{1}(1,:),S_cell{1}(2,:),S_cell{1}(3,:),'.')
