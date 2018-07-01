@@ -1,6 +1,6 @@
 function [Ff, inliers_idx_star, n_inliers_star] = norm_8p_algo_RANSAC(m1,m2)
 N = 500;             %No. of iterations 
-dist_thresh = 5000;           %tune the inliers distance threshold here
+dist_thresh = 10000;           %tune the inliers distance threshold here
 
 %Initializing variable to store max no. of inliers
 n_inliers_star = 0;  

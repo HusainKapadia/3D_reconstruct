@@ -38,6 +38,8 @@ for i = 1:size(PVMb,2)
             % Update M and S
             M = M*C;
             S = pinv(C)*S;
+        else
+            M =[]; S = [];
         end
         M_cell{i} = M;
         S_cell{i} = S;

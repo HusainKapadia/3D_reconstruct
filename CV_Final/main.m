@@ -3,7 +3,11 @@ p = pwd;
 addpath([p '\scripts'],[p '\functions']);
 
 %% Reading the image, features and descriptor files
-%(Modify required directories in the 'read_im_feat.m' script)
+%Edit the following directory paths if images and features are stored somewhere else
+%hesaff_dir = [p '\feat_hesaff']; %directory containing only hessian affine features
+%haraff_dir = [p '\feat_haraff']; %directory containing only hariss affine features
+%im_dir = [p '\images'];          %directory containing only images
+
 run('read_im_feat.m');
 disp('Data Loaded')
 %% Extracting foreground features
@@ -43,3 +47,4 @@ run('stitching3.m')
 disp('Transformation complete')
 %% 3D model plotting
 plot3(S_cell{1}(1,:),S_cell{1}(2,:),S_cell{1}(3,:),'.')
+surface3D(S_cell,);
